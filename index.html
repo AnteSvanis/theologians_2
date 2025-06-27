@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Theologian Curiosa</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 40px;
+      background-color: #f4f4f9;
+      
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      font-size: 1.1em;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .gallery img {
+      width: 180px;
+      height: auto;
+      cursor: pointer;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      text-align: left;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px; right: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+<div class="top-buttons">
+  <a href="about_me.html" class="nav-button">About Me</a>
+  <a href="contact_me.html" class="nav-button">Contact</a>
+</div>
+
+  <h1>Meet the Theologians</h1>
+  <p>Click on each image below to read a fun curiosa about the theologian!</p>
+
+  <div class="gallery">
+    <img src="images/wright.jpeg" alt="N.T. Wright" onclick="openModal('ntwright')">
+    <img src="images/bird.jpeg" alt="Michael Bird" onclick="openModal('bird')">
+    <img src="images/piper.jpeg" alt="John Piper" onclick="openModal('piper')">
+  </div>
+
+  <!-- Modals -->
+  <div id="ntwright" class="modal" onclick="closeModal(this)">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal(this.parentElement.parentElement)">&times;</span>
+      <h2>N.T. Wright</h2>
+      <p>Also known as Tom Wright, he’s written over 80 books and even played guitar in a rock band in university. He’s often called the “C.S. Lewis of our time.”</p>
+    </div>
+  </div>
+
+  <div id="bird" class="modal" onclick="closeModal(this)">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal(this.parentElement.parentElement)">&times;</span>
+      <h2>Michael Bird</h2>
+      <p>This Aussie theologian used to be a military paratrooper! He mixes serious theology with humor, and even co-authored a book with N.T. Wright.</p>
+    </div>
+  </div>
+
+  <div id="piper" class="modal" onclick="closeModal(this)">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal(this.parentElement.parentElement)">&times;</span>
+      <h2>John Piper</h2>
+      <p>Before preaching, Piper wanted to be a doctor—until pneumonia shifted his path to theology. He’s known for “Christian Hedonism” and his quote: “God is most glorified in us when we are most satisfied in Him.”</p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+
+    function closeModal(modal) {
+      modal.style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>

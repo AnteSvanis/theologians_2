@@ -1,0 +1,114 @@
+/* Font and base styling */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #090040;
+  color: #FFCC00;
+  text-align: center;
+  padding: 60px 20px;
+  margin: 0;
+}
+
+/* Headings */
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #FFCC00;
+}
+
+.intro {
+  font-size: 1.4em;
+  color: #B13BFF;
+}
+
+/* Image gallery */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 220px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(255, 204, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 4px solid #471396;
+}
+
+.gallery img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(177, 59, 255, 0.5);
+}
+
+/* Modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  color: #090040;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 90%;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+  color: #471396;
+  font-size: 2em;
+  margin-top: 0;
+}
+
+.modal-content p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.top-buttons {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.nav-button {
+  background-color: #B13BFF;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  margin-left: 15px;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #471396;
+}
+
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #B13BFF;
+}
